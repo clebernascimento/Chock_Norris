@@ -13,6 +13,8 @@ class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
         try {
             emit(Resources.success(data = mainRepository.getJokes()))
         } catch (exception: Exception) {
+            println("debug1")
+            println(exception)
             emit(
                 Resources.error(
                     data = null,

@@ -6,14 +6,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.desafiopulsus.R
+import com.example.desafiopulsus.data.model.Joke
 import com.example.desafiopulsus.data.model.Jokes
 import kotlinx.android.synthetic.main.item_jokes.view.*
 
-class MainAdapter(private val jokes: ArrayList<Jokes>) :
+class MainAdapter(private val jokes: ArrayList<Joke>) :
     RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(jokes: Jokes) {
+        fun bind(jokes: Joke) {
             itemView.apply {
                 tvUrlJokes.text = jokes.url
                 tvValueJokes.text = jokes.value
@@ -35,10 +36,10 @@ class MainAdapter(private val jokes: ArrayList<Jokes>) :
         holder.bind(jokes[position])
     }
 
-    fun addJokes(jokes: List<Jokes>) {
+    fun addJokes(joke: Joke) {
         this.jokes.apply {
             clear()
-            addAll(jokes)
+            add(joke)
         }
     }
 }
