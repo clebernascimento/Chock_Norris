@@ -1,5 +1,7 @@
 package com.example.desafiopulsus.ui.main.viewModel
 
+import android.os.Handler
+import android.os.Looper
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.example.desafiopulsus.data.repository.MainRepository
@@ -13,8 +15,6 @@ class MainViewModel(private val mainRepository: MainRepository) : ViewModel() {
         try {
             emit(Resources.success(data = mainRepository.getJokes()))
         } catch (exception: Exception) {
-            println("debug1")
-            println(exception)
             emit(
                 Resources.error(
                     data = null,

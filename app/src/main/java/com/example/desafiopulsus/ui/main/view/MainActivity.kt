@@ -2,6 +2,8 @@ package com.example.desafiopulsus.ui.main.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -64,9 +66,7 @@ class MainActivity : AppCompatActivity() {
                         progressBar.visibility = View.GONE
                         Toast.makeText(this, "Sucesso", Toast.LENGTH_LONG).show()
                         resource.data?.let { joke ->
-                            {
-                                retrieveList(joke)
-                            }
+                            retrieveList(joke)
                         }
                     }
                     Status.ERROR -> {

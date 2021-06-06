@@ -16,7 +16,7 @@ class MainAdapter(private val jokes: ArrayList<Joke>) :
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(jokes: Joke) {
             itemView.apply {
-                tvUrlJokes.text = jokes.url
+                //tvUrlJokes.text = jokes.url
                 tvValueJokes.text = jokes.value
                 Glide.with(imgJokes.context)
                     .load(jokes.icon_url)
@@ -38,7 +38,7 @@ class MainAdapter(private val jokes: ArrayList<Joke>) :
 
     fun addJokes(joke: Joke) {
         this.jokes.apply {
-            clear()
+            //clear()
             add(joke)
         }
     }
