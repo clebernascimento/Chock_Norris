@@ -1,6 +1,5 @@
 package com.example.desafiopulsus.data.api
 
-import com.example.desafiopulsus.data.model.api.ApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

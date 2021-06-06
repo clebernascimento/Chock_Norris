@@ -2,6 +2,8 @@ package com.example.desafiopulsus.ui.main.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -11,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.desafiopulsus.R
 import com.example.desafiopulsus.data.api.ApiHelper
 import com.example.desafiopulsus.data.api.RetrofitBuilder
+import com.example.desafiopulsus.data.model.Joke
 import com.example.desafiopulsus.data.model.Jokes
 import com.example.desafiopulsus.databinding.ActivityMainBinding
 import com.example.desafiopulsus.ui.main.adapter.MainAdapter
@@ -53,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         )
         recyclerView.adapter = adapter
     }
+
     private fun setupObservers() {
         viewModel.getJokes().observe(this, Observer {
             it?.let { resource ->
@@ -61,7 +65,9 @@ class MainActivity : AppCompatActivity() {
                         recyclerView.visibility = View.VISIBLE
                         progressBar.visibility = View.GONE
                         Toast.makeText(this, "Sucesso", Toast.LENGTH_LONG).show()
-                        resource.data?.let { users -> retrieveList(users) }
+                        resource.data?.let { joke ->
+                            retrieveList(joke)
+                        }
                     }
                     Status.ERROR -> {
                         recyclerView.visibility = View.VISIBLE
@@ -77,9 +83,9 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun retrieveList(jokes: List<Jokes>) {
+    private fun retrieveList(joke: Joke) {
         adapter.apply {
-            addJokes(jokes)
+            addJokes(joke)
             notifyDataSetChanged()
         }
     }

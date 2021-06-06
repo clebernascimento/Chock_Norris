@@ -1,5 +1,7 @@
 package com.example.desafiopulsus.ui.main.viewModel
 
+import android.os.Handler
+import android.os.Looper
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.example.desafiopulsus.data.repository.MainRepository
