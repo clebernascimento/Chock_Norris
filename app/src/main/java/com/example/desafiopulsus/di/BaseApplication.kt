@@ -1,4 +1,4 @@
-package com.example.desafiopulsus.ui.main.di
+package com.example.desafiopulsus.di
 
 import android.app.Application
 import org.koin.android.ext.koin.androidContext

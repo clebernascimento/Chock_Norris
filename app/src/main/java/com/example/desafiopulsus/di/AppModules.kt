@@ -1,8 +1,7 @@
-package com.example.desafiopulsus.ui.main.di
+package com.example.desafiopulsus.di
 
 import com.example.desafiopulsus.BuildConfig
 import com.example.desafiopulsus.data.api.ApiService
-import com.example.desafiopulsus.data.api.RetrofitBuilder
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
