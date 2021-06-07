@@ -1,6 +1,7 @@
 package com.example.desafiopulsus.di
 
 import android.app.Application
+import com.example.desafiopulsus.di.AppModules.Project
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -12,7 +13,7 @@ class BaseApplication: Application() {
         startKoin {
             androidLogger(Level.ERROR)
             androidContext(this@BaseApplication)
-//            modules(Project)
+            modules(Project)
         }
     }
 }

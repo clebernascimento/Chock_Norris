@@ -21,10 +21,12 @@ import com.example.desafiopulsus.ui.main.viewModel.MainViewModel
 import com.example.desafiopulsus.ui.main.viewModel.base.ViewModelFactory
 import com.example.desafiopulsus.utils.Status
 import kotlinx.android.synthetic.main.activity_main.*
+import org.koin.androidx.viewmodel.ext.android.getViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var viewModel: MainViewModel
+    private val viewModel: MainViewModel by viewModel()
     private lateinit var adapter: MainAdapter
 
     private lateinit var binding: ActivityMainBinding
@@ -33,16 +35,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setupViewModel()
+//        setupViewModel()
         setupUI()
         setupObservers()
     }
 
     private fun setupViewModel() {
-        viewModel = ViewModelProviders.of(
-            this,
-            ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
-        ).get(MainViewModel::class.java)
+//        viewModel = getViewModel()
+//        viewModel = ViewModelProviders.of(
+//            this,
+//            ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
+//        ).get(MainViewModel::class.java)
     }
 
     private fun setupUI() {
