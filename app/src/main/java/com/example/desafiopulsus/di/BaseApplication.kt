@@ -11,7 +11,7 @@ class BaseApplication: Application() {
     override fun onCreate() {
         super.onCreate()
         startKoin {
-            androidLogger(Level.ERROR)
+            androidLogger(Level.DEBUG)
             androidContext(this@BaseApplication)
             modules(Project)
         }

@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DesafioPulsus</string>
     <string name="update_joke">Novo Joke</string>
     <string name="text_toolbar">Jokes ChuckNorris</string>
 </resources>

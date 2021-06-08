@@ -33,19 +33,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_main)
 
-//        setupViewModel()
         setupUI()
         setupObservers()
+        updaterJoke()
     }
 
-    private fun setupViewModel() {
-//        viewModel = getViewModel()
-//        viewModel = ViewModelProviders.of(
-//            this,
-//            ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
-//        ).get(MainViewModel::class.java)
+    private fun updaterJoke() {
+        btJoke.setOnClickListener(View.OnClickListener { setupObservers() })
     }
 
     private fun setupUI() {
@@ -67,7 +64,6 @@ class MainActivity : AppCompatActivity() {
                     Status.SUCCESS -> {
                         recyclerView.visibility = View.VISIBLE
                         progressBar.visibility = View.GONE
-                        Toast.makeText(this, "Sucesso", Toast.LENGTH_LONG).show()
                         resource.data?.let { joke ->
                             retrieveList(joke)
                         }
