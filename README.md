@@ -1,7 +1,7 @@
 # Chock_Norris
 
 <p align="center">
-    <img src="https://github.com/clebernascimento/chock_norris/blob/master/img/chock_norris.jpg"/>
+    <img src="C:\Users\cleber.nascimento\Desktop\Chock_Norris\app\src\main\res\drawable"/>
     </br>
     <a href="readme_en.md">English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="readme.md">Português</a>&nbsp;&nbsp;&nbsp;
