@@ -20,6 +20,5 @@ Para executar o projeto no dispositivo atravéis da IDE Android Studio gere o ap
 ## Executando o projeto
 ### Clonando o projeto
 ```bash
-$ git clone https://github.com/felipedmsantos95/proffy
-$ cd proffy
+$ https://github.com/clebernascimento/Chock_Norris.git
 ```
