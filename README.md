@@ -1,5 +1,12 @@
 # Chock_Norris
 
+<p align="center">
+    <img src="https://github.com/felipedmsantos95/proffy/blob/master/img/Chock_Norris.jpg"/>
+    </br>
+    <a href="readme_en.md">English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="readme.md">Português</a>&nbsp;&nbsp;&nbsp;
+</p>
+
 ## Sobre
 Aplicação desenvolvida em Android Nativo para estudos utilizando uma requisição api on-line
 ## Tecnologias utilizadas
