@@ -39,7 +39,7 @@ class MainAdapter(private val jokes: ArrayList<Joke>) :
     fun addJokes(joke: Joke) {
         this.jokes.apply {
             //clear()
-            add(joke)
+            add(0,joke)
         }
     }
 }
